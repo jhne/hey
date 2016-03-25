@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+$blue: #06f;
+$dark: #000;
+
+@mixin vertical-align {
+    position: relative;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@font-face {
+  font-family: 'Pressura';
+  src: url('fonts/Pressura.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Pressura.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Pressura.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Pressura.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Pressura.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: $blue;
+}
+
+::selection {
+    color: #fff; 
+    background: $blue;
+}
+
+* {
+	box-sizing: border-box;
+}

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+$(document).ready(function(){var n=io(),e=prompt("Please enter a name","");(""===e||null===e)&&(e="Anonymous"),n.emit("connectionNotification",e),$("form").submit(function(){var o=$("#m").val();return n.emit("chat message",""+e+": "+o),$("#m").val(""),!1}),n.on("chat message",function(n){$("#messages").append($('<li class="msg"><p>'+n+"</p></li>"))}),n.on("connectionNotification",function(n){$("#messages").append($('<li class="system"><p>'+n+" connected</p></li>"))})});
+=======
 $(document).ready(function(){var e=io();e.emit("connectionNotification"),e.emit("addNew"),$("form").submit(function(){return e.emit("chat message",$("#m").val()),$("#m").val(""),!1}),e.on("chat message",function(e){$("#messages").append($("<li>").text(e))}),e.on("connectionNotification",function(e){var e="Someone connected";$("#messages").append($('<li class="gray">').text(e))}),e.on("addNew",function(e){$("#holder").append($('<div class="element"></div>'))})});
+>>>>>>> b4896ae0321dbc8f1f49886fb6dc002134b53acc

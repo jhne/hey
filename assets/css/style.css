@@ -359,10 +359,17 @@ th {
   padding: 0; }
 
 @font-face {
+<<<<<<< HEAD
+  font-family: 'Circular';
+  src: url("fonts/Circular.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Circular.eot?#iefix") format("embedded-opentype"), url("fonts/Circular.woff2") format("woff2"), url("fonts/Circular.woff") format("woff"), url("fonts/Circular.ttf") format("truetype"); }
+=======
   font-family: 'Pressura';
   src: url("fonts/Pressura.eot");
   /* IE9 Compat Modes */
   src: url("fonts/Pressura.eot?#iefix") format("embedded-opentype"), url("fonts/Pressura.woff2") format("woff2"), url("fonts/Pressura.woff") format("woff"), url("fonts/Pressura.ttf") format("truetype"); }
+>>>>>>> b4896ae0321dbc8f1f49886fb6dc002134b53acc
 ::-moz-selection {
   /* Code for Firefox */
   color: #fff;
@@ -423,6 +430,23 @@ form button {
   margin: 0;
   padding: 0; }
 
+<<<<<<< HEAD
+.msg, .system {
+  padding: 20px 20px 20px 0;
+  margin: 20px;
+  display: block;
+  background: #fff; }
+  .msg p, .system p {
+    background: #000;
+    padding: 20px;
+    margin: 0;
+    color: #fff;
+    display: inline; }
+
+.system p {
+  color: #000;
+  background: #eee; }
+=======
 #messages li {
   padding: 20px;
   border-bottom: 1px solid #ddd; }
@@ -430,6 +454,7 @@ form button {
 .gray {
   color: #aaa;
   background: #ddd; }
+>>>>>>> b4896ae0321dbc8f1f49886fb6dc002134b53acc
 
 #holder {
   position: fixed;

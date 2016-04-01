@@ -12,21 +12,12 @@ $dark: #000;
 }
 
 @font-face {
-<<<<<<< HEAD
   font-family: 'Circular';
   src: url('fonts/Circular.eot'); /* IE9 Compat Modes */
   src: url('fonts/Circular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('fonts/Circular.woff2') format('woff2'), /* Super Modern Browsers */
        url('fonts/Circular.woff') format('woff'), /* Pretty Modern Browsers */
        url('fonts/Circular.ttf')  format('truetype'), /* Safari, Android, iOS */
-=======
-  font-family: 'Pressura';
-  src: url('fonts/Pressura.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Pressura.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Pressura.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/Pressura.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/Pressura.ttf')  format('truetype'), /* Safari, Android, iOS */
->>>>>>> b4896ae0321dbc8f1f49886fb6dc002134b53acc
 }
 
 ::-moz-selection { /* Code for Firefox */

@@ -13,13 +13,9 @@ html, body {
 }
 
 * { 
-<<<<<<< HEAD
 	margin: 0; 
 	padding: 0; 
 	box-sizing: border-box; 
-=======
-	margin: 0; padding: 0; box-sizing: border-box; 
->>>>>>> b4896ae0321dbc8f1f49886fb6dc002134b53acc
 }
       
 form { 
@@ -55,7 +51,6 @@ form button {
 	padding: 0; 
 }
 
-<<<<<<< HEAD
 .msg, .system { 
 	padding: 20px 20px 20px 0; 
 	margin: 20px;
@@ -74,16 +69,11 @@ form button {
 .system p {
 	color: #000;
 	background: #eee;
-=======
-#messages li { 
-	padding: 20px; 
-	border-bottom: 1px solid #ddd;
 }
 
-.gray {
-	color: #aaa;
-	background: #ddd;
->>>>>>> b4896ae0321dbc8f1f49886fb6dc002134b53acc
+.msg.you p {
+	text-align: right;
+	float: right;
 }
 
 #holder {

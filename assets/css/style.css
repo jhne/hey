@@ -4,8 +4,8 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700);
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -377,7 +377,7 @@ th {
 
 html, body {
   background: #fff;
-  font-family: 'Droid Sans Mono', serif;
+  font-family: 'Roboto', sans-serif;
   height: 100%;
   overflow-x: hidden; }
 
@@ -405,18 +405,23 @@ form {
 form input {
   border: 0;
   padding: 20px;
-  width: 90%;
-  background: #eee; }
+  width: 480px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  margin: 30px auto;
+  display: block; }
   form input:focus {
     outline: 0;
-    background: #ddd; }
+    background: #000;
+    color: #fff; }
 
 form button {
   width: 10%;
   background: #06f;
   border: none;
   padding: 20px;
-  color: #fff; }
+  color: #fff;
+  display: none; }
 
 #messages {
   list-style-type: none;
@@ -433,7 +438,8 @@ form button {
     padding: 20px;
     margin: 0;
     color: #fff;
-    display: inline; }
+    display: inline;
+    border-radius: 3px; }
 
 .system p {
   color: #000;
@@ -441,7 +447,8 @@ form button {
 
 .msg.you p {
   text-align: right;
-  float: right; }
+  right: 0;
+  position: relative; }
 
 #holder {
   position: fixed;
@@ -455,6 +462,32 @@ form button {
   height: 50%;
   border: 1px solid #fff;
   float: left; }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInUp {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
 
 @media only screen and (min-width: 768px) {
   #main {

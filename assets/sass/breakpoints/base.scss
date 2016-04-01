@@ -1,6 +1,6 @@
 html, body {
 	background: #fff;
-	font-family: 'Droid Sans Mono', serif;
+	font-family: 'Roboto', sans-serif;
 	height: 100%;
 	overflow-x: hidden;
 }
@@ -28,12 +28,16 @@ form {
 form input { 
 	border: 0; 
 	padding: 20px; 
-	width: 90%; 
-	background: #eee;
+	width: 480px; 
+	background: #f0f0f0;
+	border-radius: 3px;
+	margin: 30px auto;
+	display: block;
 
 	&:focus {
 		outline: 0;
-		background: #ddd;
+		background: #000;
+		color: #fff;
 	}
 }
       
@@ -43,6 +47,7 @@ form button {
 	border: none; 
 	padding: 20px;
 	color: #fff;
+	display: none;
 }
 
 #messages { 
@@ -63,6 +68,7 @@ form button {
 		margin: 0;
 		color: #fff;
 		display: inline;
+		border-radius: 3px;
 	}
 }
 
@@ -73,7 +79,8 @@ form button {
 
 .msg.you p {
 	text-align: right;
-	float: right;
+	right: 0;
+	position: relative;
 }
 
 #holder {

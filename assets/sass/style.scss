@@ -1,6 +1,7 @@
 @import "breakpoints/normalize";
 @import "breakpoints/stuff";
 @import "breakpoints/base";
+@import "breakpoints/animations";
 
 @media only screen and (min-width: 481px) {
 	@import "breakpoints/481up";

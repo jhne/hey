@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="title" content="Hey" />
+    <meta name="description" content="Dead simple chat rooms based on your location." />
     <title>Hey</title>
-    <link rel="stylesheet" href="assets/css/style.css">  
+    <meta property="og:title" content="Hey" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hey.co/" />
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <ul id="messages"></ul>
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input placeholder="Type something..." id="m" autocomplete="off" /><button>Send</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>

@@ -1,24 +1,43 @@
 $(document).ready(function(){
     var socket = io();
+    $('#nameInput').focus();
+    var name = "";
+
+    var colors = ['#F61067', '#5E239D', '#00F0B5'];
 
     // Get the name using a prompt. This should be prettier.
-    var name = prompt("Please enter a name", "");
+    /*var name = prompt("Please enter a name", "");
     if (name === "" || name === null) {
         name = "Anonymous";
     }
+    */
 
-    // Emit shit bruh
-    socket.emit('connectionNotification', name);
+    $('#savename').click(function() {
+        var inputName = $('#nameInput').val();
+
+        if (inputName === "") {
+            name = "Anonymous";
+        } else {
+            name = inputName;
+        }
+
+        alert(name);
+        $('#name').hide();
+        $('#compose').show();
+        socket.emit('connectionNotification', name);
+        $('#m').focus();
+        return name;
+    });
 
     // Sending a msg
-    $('form').submit(function(){
+    $('#compose').submit(function(){
         var fieldVal = $('#m').val();
         if (fieldVal === "") {
             // nothing
         } else {
             socket.emit('chat message', ''+ name+': '+ fieldVal +'');
             $('#m').val('');
-            $('#messages').append($('<li class="msg you animated fadeInUp"><p>'+ fieldVal +'</p></li>'));
+            $('#messages').append($('<li class="msg you"><p class="animated fadeInUp">'+ fieldVal +'</p></li>'));
             return false;
         }
         $('#m').focus();
@@ -36,7 +55,7 @@ $(document).ready(function(){
 
     /*
     
-    We probably don't want to send the nickname and message as
+    We probably don't want to send the nickname + message as
     a whole string in the future since we're locked to displaying
     it in a certain way if we do.
 

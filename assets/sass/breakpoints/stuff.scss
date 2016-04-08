@@ -11,16 +11,20 @@ $dark: #000;
     transform: translateY(-50%);
 }
 
+/*
+
 @font-face {
   font-family: 'Circular';
-  src: url('fonts/Circular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Circular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Circular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/Circular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/Circular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('fonts/Circular.eot');
+  src: url('fonts/Circular.eot?#iefix') format('embedded-opentype'),  
+       url('fonts/Circular.woff2') format('woff2'), 
+       url('fonts/Circular.woff') format('woff'), 
+       url('fonts/Circular.ttf')  format('truetype'),
 }
 
-::-moz-selection { /* Code for Firefox */
+*/
+
+::-moz-selection {
     color: #fff;
     background: $blue;
 }
@@ -31,5 +35,5 @@ $dark: #000;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }

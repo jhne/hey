@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <div id="name">
+      <input placeholder="Pick a name" id="nameInput">
+      <a href="#" id="savename">Continue</a>
+    </div>
     <ul id="messages"></ul>
-    <form action="">
+    <form action="" id="compose">
       <input placeholder="Type something..." id="m" autocomplete="off" /><button>Send</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>

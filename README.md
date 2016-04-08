@@ -1,0 +1,1 @@
+The perfect web app for when the zombie apocalypse hits and you need something to pass the time while you starve to death in your 100 square foot studio apartment.

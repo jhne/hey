@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     var colors = ['#F61067', '#5E239D', '#00F0B5'];
 
-    $('#savename').click(function() {
+    $('#name').submit(function() {
         var inputName = $('#nameInput').val();
 
         if (inputName === "") {

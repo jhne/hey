@@ -20,11 +20,12 @@ io.on('connection', function(socket){
   // Tell everyone someone connected
   socket.on('connectionNotification', function(name){
     io.emit('connectionNotification', name);
+    console.log(name +' joined the chat');
   });
 
   // A message
   socket.on('chat message', function(msg){
-    console.log('message: ' + msg);
+    console.log('Message: ' + msg);
     socket.broadcast.emit('chat message', msg);
   });
 });

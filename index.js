@@ -5,6 +5,9 @@ app.use('/', express.static(__dirname + '/'));
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+// Port
+var port = process.env.PORT || 3000;
+
 // Get index.html
 app.get('/', function(req, res){
   res.sendFile(__dirname+'/index.html');
@@ -31,6 +34,6 @@ io.on('connection', function(socket){
 });
 
 // Server
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(port, function(){
+  console.log('listening on *:'+port);
 });

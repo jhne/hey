@@ -5,13 +5,6 @@ $(document).ready(function(){
 
     var colors = ['#F61067', '#5E239D', '#00F0B5'];
 
-    // Get the name using a prompt. This should be prettier.
-    /*var name = prompt("Please enter a name", "");
-    if (name === "" || name === null) {
-        name = "Anonymous";
-    }
-    */
-
     $('#savename').click(function() {
         var inputName = $('#nameInput').val();
 
@@ -21,7 +14,6 @@ $(document).ready(function(){
             name = inputName;
         }
 
-        alert(name);
         $('#name').hide();
         $('#compose').show();
         socket.emit('connectionNotification', name);
@@ -33,7 +25,7 @@ $(document).ready(function(){
     $('#compose').submit(function(){
         var fieldVal = $('#m').val();
         if (fieldVal === "") {
-            // nothing
+            return false
         } else {
             socket.emit('chat message', ''+ name+': '+ fieldVal +'');
             $('#m').val('');
